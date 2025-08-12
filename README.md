@@ -2,7 +2,8 @@
 Aulas de Programação Web III com o professor João Siles
 
 
-### **1. Instalação e Configuração do Laravel**
+
+### **Instalação e Configuração do Laravel**
 
 Este guia detalha o processo de instalação e a configuração inicial de um projeto Laravel. Siga os passos abaixo para começar.
 
@@ -85,7 +86,7 @@ Se você planeja criar muitos projetos Laravel, instalar o Laravel Installer glo
 
 ----------
 
-#### **Passo 3: Configurar e Iniciar o Servidor**
+### **2. Instalação e Iniciação de Projeto Laravel **
 
 Depois que o aplicativo for criado, você pode iniciar o servidor de desenvolvimento local do Laravel, o queue worker e o servidor de desenvolvimento do Vite usando o `dev` script do Composer.
 
@@ -100,6 +101,7 @@ Depois que o aplicativo for criado, você pode iniciar o servidor de desenvolvim
     
     ```
     
+  
 2.  **Instale as dependências e inicie o servidor**
     
     Crie o arquivo de ambiente, gere a chave da aplicação, instale as dependências do Node.js e compile os assets do projeto. Por fim, inicie o servidor de desenvolvimento, o queue worker e o Vite:
@@ -109,15 +111,57 @@ Depois que o aplicativo for criado, você pode iniciar o servidor de desenvolvim
     ```
     npm install 
     npm run build
-    composer run dev
+        
+    ```
+
+    
+3.  **Instale as dependências do Composer:**
+    
+    bash
+    
+    ```
+    composer install
     
     ```
     
+    Se não tiver o Composer,  [instale aqui](https://getcomposer.org/).
+    
+4.  **Copie o arquivo de configuração de ambiente:**
+    
+    bash
+    
+    ```
+    cp .env.example .env
+    
+    ```
+    
+5.  **Configure o arquivo  `.env`:**
+    
+    -   Abra o arquivo  `.env`  e ajuste as configurações de banco de dados, cache, etc., conforme necessário.
+6.  **Gere a chave da aplicação:**
+    
+    bash
+    
+    ```
+    php artisan key:generate
+    
+    ```
+    
+7.  **Rode as migrations do banco de dados (se necessário):**
+    
+    bash
+    
+    ```
+    php artisan migrate
+    
+    ```
 
-Sua aplicação estará acessível no seu navegador em **http://localhost:8000**.
+8.  **Por ultimo rode esse comando para iniciar o projeto:**
 
-----------
+	bash 
 
-### **2. Instalação e Inicição de Repositório**
+	````
+    composer run dev
 
-#### **Passo 1: Clref**
+	````
+ Sua aplicação estará acessível no seu navegador em **http://localhost:8000**.
