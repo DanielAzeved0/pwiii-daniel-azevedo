@@ -2,6 +2,7 @@
 Aulas de Programação Web III com o professor João Siles
 
 
+ ### **Aulas de Programação Web III dia 11/08/2025
 
 ### **Instalação e Configuração do Laravel**
 
@@ -165,3 +166,8 @@ Depois que o aplicativo for criado, você pode iniciar o servidor de desenvolvim
 
 	````
  Sua aplicação estará acessível no seu navegador em **http://localhost:8000**.
+
+ 
+ ### **Aulas de Programação Web III dia 18/08/2025
+
+    Na aula de hoje, tivemos uma introdução ao Tailwind, um framework CSS para agilizar a criação de interfaces de usuário.
