@@ -2,7 +2,7 @@
 Aulas de Programação Web III com o professor João Siles
 
 
- ### **Aulas de Programação Web III dia 11/08/2025
+ ###Aulas de Programação Web III dia 11/08/2025
 
 ### **Instalação e Configuração do Laravel**
 
@@ -168,6 +168,123 @@ Depois que o aplicativo for criado, você pode iniciar o servidor de desenvolvim
  Sua aplicação estará acessível no seu navegador em **http://localhost:8000**.
 
  
- ### **Aulas de Programação Web III dia 18/08/2025
+ ### Aulas de Programação Web III - 18/08/2025
 
+#### Introdução ao Tailwind e Configuração com SQLite
+
+Na aula de hoje, tivemos uma introdução ao Tailwind, um framework CSS que nos ajuda a agilizar a criação de interfaces de usuário. Além disso, aprendemos a usar o **SQLite** no nosso projeto Laravel, uma ótima opção para desenvolvimento local por ser um banco de dados leve e que armazena tudo em um único arquivo.
+
+ ### Aulas de Programação Web III - 25/08/2025
+
+#### Configuração do SQLite no Laravel
+
+Para usar o SQLite, siga estes passos para configurar seu projeto:
+
+1.  **Crie o arquivo do banco de dados** No seu terminal, dentro do diretório do projeto, use o comando `touch` para criar um arquivo vazio que servirá como seu banco de dados.
+    
+    Bash
+    
+    ```
+    touch database/database.sqlite
+    
+    ```
+    
+2.  **Configure o arquivo `.env`** Abra o arquivo `.env` e altere a configuração do banco de dados para usar o SQLite. Você pode comentar ou remover as linhas de configuração do MySQL (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`) e deixar apenas as configurações do SQLite.
+    
+    Ini, TOML
+    
+    ```
+    DB_CONNECTION=sqlite
+    DB_DATABASE=/caminho/completo/do/seu/projeto/database/database.sqlite
+    
+    ```
+    
+    **Nota:** Substitua `/caminho/completo/do/seu/projeto/` pelo caminho real da pasta do seu projeto. Uma alternativa mais simples é usar a função `database_path` no arquivo `config/database.php` para se referir ao arquivo `.sqlite`, mas alterar o `.env` é o método mais comum e direto.
+    
+3.  **Rode as Migrations** Com a configuração feita, execute as migrations para criar as tabelas no seu banco de dados SQLite.
+    
+    Bash
+    
+    ```
+    php artisan migrate
+    
+    ```
+    
+
+#### Usando o SQLite Viewer
+
+Para visualizar e gerenciar o banco de dados SQLite, você pode usar uma extensão no VS Code, como o **SQLite Viewer**. Isso permite que você abra o arquivo `database.sqlite` diretamente no editor e execute queries.
+
+#### Queries e Comandos Úteis
+
+No Laravel, você pode usar o **`php artisan tinker`** para interagir com seu banco de dados e modelos diretamente no terminal. É uma ótima ferramenta para testar queries rápidas sem a necessidade de criar rotas ou controllers.
+
+1.  **Acessar o Tinker**
+    
+    Bash
+    
+    ```
+    php artisan tinker
+    
+    ```
+    
+2.  **Consultar todos os usuários** Dentro do `tinker`, você pode usar o modelo `User` para buscar todos os registros.
+    
+    PHP
+    
+    ```
+    App\Models\User::all();
+    
+    ```
+    
+3.  **Encontrar um usuário por ID** Busca um usuário específico com base no seu ID.
+    
+    PHP
+    
+    ```
+    App\Models\User::find(1);
+    
+    ```
+    
+4.  **Criar um novo usuário** Adiciona um novo registro na tabela `users`.
+    
+    PHP
+    
+    ```
+    $user = App\Models\User::create([
+        'name' => 'João',
+        'email' => 'joao@example.com',
+        'password' => bcrypt('senha123')
+    ]);
+    
+    ```
+    
+5.  **Atualizar um registro** Encontra um usuário e altera suas informações.
+    
+    PHP
+    
+    ```
+    $user = App\Models\User::find(1);
+    $user->name = 'João Siles';
+    $user->save();
+    
+    ```
+    
+6.  **Deletar um registro** Remove um usuário da tabela.
+    
+    PHP
+    
+    ```
+    $user = App\Models\User::find(1);
+    $user->delete();
+    
+    ```
+    
+7.  **Sair do Tinker**
+    
+    PHP
+    
+    ```
+    exit
+    ```
     Na aula de hoje, tivemos uma introdução ao Tailwind, um framework CSS para agilizar a criação de interfaces de usuário.
