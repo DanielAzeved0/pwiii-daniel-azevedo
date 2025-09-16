@@ -288,3 +288,33 @@ No Laravel, você pode usar o **`php artisan tinker`** para interagir com seu ba
     exit
     ```
     Na aula de hoje, tivemos uma introdução ao Tailwind, um framework CSS para agilizar a criação de interfaces de usuário.
+
+	# Aula 03 -
+
+ ### Aulas de Programação Web III - 15/09/2025
+
+1. **Criação do Controller**
+   - Criamos o [`App\Http\Controllers\ClienteController`](app/Http/Controllers/ClienteController.php) com os métodos `index` (para listar clientes) e `store` (para cadastrar novos clientes).
+
+2. **Configuração das Rotas**
+   - Adicionamos as rotas no arquivo [`routes/web.php`](routes/web.php):
+     - `GET /cliente` chama o método `index` para visualizar os clientes.
+     - `POST /cliente` chama o método `store` para cadastrar um novo cliente.
+
+3. **Criação da View**
+   - Implementamos a view [`resources/views/cliente.blade.php`](resources/views/cliente.blade.php) para exibir o formulário de cadastro e a tabela de clientes cadastrados.
+
+4. **Integração com o Model**
+   - Utilizamos o model [`App\Models\Cliente`](app/Models/Cliente.php) para manipular os dados dos clientes.
+
+5. **Testes de Cadastro e Listagem**
+   - Testamos o cadastro de clientes via formulário e verificamos a listagem dos dados na tabela.
+
+## Exemplo de uso
+
+- Acesse `/cliente` para visualizar e cadastrar clientes.
+- Preencha o formulário e clique em "Salvar" para adicionar um novo cliente.
+
+---
+
+Essas foram as principais atividades desenvolvidas na aula de hoje.
