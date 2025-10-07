@@ -289,7 +289,7 @@ No Laravel, você pode usar o **`php artisan tinker`** para interagir com seu ba
     ```
     Na aula de hoje, tivemos uma introdução ao Tailwind, um framework CSS para agilizar a criação de interfaces de usuário.
 
-	# Aula 03 -
+	# Aula 03 
 
  ### Aulas de Programação Web III - 15/09/2025
 
@@ -318,3 +318,57 @@ No Laravel, você pode usar o **`php artisan tinker`** para interagir com seu ba
 ---
 
 Essas foram as principais atividades desenvolvidas na aula de hoje.
+
+# Aula 04 
+
+ ### Aulas de Programação Web III - 06/10/2025
+
+#### Instalação e Configuração do Next.js (App Router)
+
+Este documento resume os passos para iniciar e configurar um projeto Next.js utilizando o **App Router**, a abordagem recomendada pela documentação oficial.
+
+---
+
+## 📋 Requisitos do Sistema
+
+- **Node.js**: Versão **18.18** ou superior.
+- **Sistema Operacional**: Funciona em **macOS**, **Windows** (incluindo WSL) ou **Linux**.
+
+---
+
+## ⚙️ Instalação
+
+Existem duas formas principais de iniciar o seu projeto:
+
+### 1. Instalação Automática (Recomendada)
+
+Use o `create-next-app` para configurar o ambiente, dependências e estrutura de forma automática.
+
+```bash
+npx create-next-app@latest
+```
+
+**Durante a execução, você será guiado por perguntas para configurar o projeto, como:**
+
+-   Nome do projeto?
+
+-   Usar TypeScript?
+
+-   Usar ESLint?
+
+-   Usar Tailwind CSS?
+
+-   Usar App Router?
+
+-   Usar Turbopack?
+
+**Rodando o Servidor de Desenvolvimento**
+
+Após a instalação, execute o seguinte comando:
+
+```
+npm run dev
+# ou use o comando de sua escolha: yarn dev, pnpm dev, etc.
+```
+
+Acesse `http://localhost:3000` no seu navegador. Edite `app/page.tsx` e veja as mudanças instantaneamente.
